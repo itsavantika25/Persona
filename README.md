@@ -97,12 +97,6 @@ The look is bold and colorful: lime, violet, magenta, cobalt, orange and pink on
 
 Answers, progress and results are stored in the browser's local storage and nowhere else. Clearing browser data, or switching devices, removes them. The privacy policy and terms pages say the same, so update them if you ever add analytics or a backend.
 
-## Before you launch
-
-- Replace the placeholder testimonials in `LandingPage.tsx` with real quotes.
-- Fill in the operator name and contact email in the privacy policy and terms.
-- Decide whether the quiz is free and whether it has an age limit, then say so in the terms.
-
 ## Known limitations
 
 - **Not validated.** The dimensions and weights are hand-assigned, with no clinical norms and no comparison group. The site says so, and the results never show percentiles.
