@@ -6,7 +6,7 @@ import SiteFooter from '../components/SiteFooter';
 import RadarChart from '../components/RadarChart';
 import BarChart from '../components/BarChart';
 import ArchetypeCard from '../components/ArchetypeCard';
-import { dimensions, questions, getArchetype, getProfileCode } from '../questions';
+import { dimensions, getArchetype, getProfileCode } from '../questions';
 import type { Dimension } from '../questions';
 import { DIM_COLORS, DIM_DESCRIPTIONS } from '../constants';
 import './LandingPage.css';
