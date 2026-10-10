@@ -15,7 +15,6 @@ export default function NotFoundPage() {
 
       <main className="notfound-container">
         <div className="notfound-card">
-          <span className="tag" style={{ background: 'var(--magenta)' }}>Vector Out of Bounds</span>
           <div className="notfound-big-num">404</div>
           <h1 className="headline notfound-title">
             LOST IN THE <span className="lime-word">SPECTRUM</span>
