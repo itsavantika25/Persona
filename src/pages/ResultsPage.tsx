@@ -121,16 +121,6 @@ export default function ResultsPage() {
     }
   }
 
-  function handleDownloadJSON() {
-    const href = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(results, null, 2));
-    const a = document.createElement('a');
-    a.setAttribute('href', href);
-    a.setAttribute('download', `persona-profile-${results.profileCode}.json`);
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-    showToast('Saved as JSON');
-  }
 
   const scores = results.scores;
   const sorted = [...dimensions].sort((a, b) => (scores[b] ?? 0) - (scores[a] ?? 0));

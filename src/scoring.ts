@@ -34,7 +34,18 @@ export type StatementAnswer = {
 };
 
 export type Answer = ScenarioAnswer | StatementAnswer;
-export type AnswersInput = Answer[] | Record<string, number[] | number>;
+
+/** Loose shape used for localStorage persistence — avoids discriminated-union narrowing. */
+export interface StoredAnswer {
+  questionId: string;
+  type: 'scenario' | 'statement';
+  ranking?: number[];
+  rankings?: number[];
+  selectedOptionIndex?: number;
+  likertValue?: number;
+  value?: number;
+}
+export type AnswersInput = Answer[] | StoredAnswer[] | Record<string, number[] | number>;
 
 export interface DimensionBounds {
   min: number;
