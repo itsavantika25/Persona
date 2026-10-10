@@ -62,27 +62,27 @@ type Tone = 'ink' | 'lime' | 'paper' | 'orange' | 'pink';
 const TESTIMONIALS: { quote: string; author: string; tone: Tone }[] = [
 {
     quote: "I thought it'd just tell me I'm an introvert or extrovert lol. The breakdown was actually way more interesting than I expected.",
-    author: 'Priya K.',
+    author: 'Anonymous',
     tone: 'ink',
   },
   {
     quote: "Okay the discipline score was a little too accurate. Made me rethink life choices.",
-    author: 'Marco D.',
+    author: 'Akshar A.',
     tone: 'lime',
   },
   {
     quote: "I took it twice because I was curious. The results were pretty similar, which was nice to see.",
-    author: 'Sasha T.',
+    author: 'Mohit A.',
     tone: 'paper',
   },
   {
     quote: "Made my friends take it too and we spent way too long comparing results.",
-    author: 'Amara N.',
+    author: 'Devanshi P.',
     tone: 'orange',
   },
   {
     quote: "Loved that I could just take the quiz without making an account or being asked to pay halfway through.",
-    author: 'Tom R.',
+    author: 'Avantika A.',
     tone: 'pink',
   },
 ];

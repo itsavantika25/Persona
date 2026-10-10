@@ -103,9 +103,9 @@ export default function PrivacyPage() {
           <section className="legal-section">
             <h2>5. Contact</h2>
             <p>
-              If you have any questions regarding this Privacy Policy, you can reach out at <a href="mailto:persona@gmail.com" style={{ textDecoration: 'underline', fontWeight: 700 }}>persona@gmail.com</a>.
+              If you have any questions regarding this Privacy Policy, you can reach out at <a href="mailto:persona.thequiz@gmail.com" style={{ textDecoration: 'underline', fontWeight: 700 }}>persona.thequiz@gmail.com</a>.
             </p>
-          </section>
+          </section> 
         </div>
       </main>
 
