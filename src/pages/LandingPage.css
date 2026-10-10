@@ -727,33 +727,41 @@
   .lp-step--rate,
   .lp-step--read,
   .lp-how-aside { grid-column: 1; grid-row: auto; }
-  .lp-step--rate { margin-left: 6%; }
-  .lp-step--read { margin-left: 12%; }
+  .lp-step--rate { margin-left: 4%; }
+  .lp-step--read { margin-left: 8%; }
   .lp-how-aside { margin-top: 8px; }
 
   .lp-board { grid-template-columns: 1fr; }
   .lp-board-card,
   .lp-board-radar,
-  .lp-board-bars { grid-column: 1; grid-row: auto; margin-top: 0; }
+  .lp-board-bars { grid-column: 1; grid-row: auto; margin-top: 0; width: 100%; }
   .lp-board-card { transform: rotate(-1.2deg); }
-  .lp-board-radar { transform: rotate(.6deg); margin-left: 4%; }
-  .lp-board-bars { transform: none; margin-left: 8%; }
+  .lp-board-radar { transform: rotate(.6deg); margin-left: 2%; width: calc(100% - 2%); }
+  .lp-board-bars { transform: none; margin-left: 4%; width: calc(100% - 4%); }
   .lp-stamp { left: auto; right: 6%; }
 
   .lp-q-grid { grid-template-columns: 1fr; }
   .lp-q--1, .lp-q--2, .lp-q--3, .lp-q--4, .lp-q--5 { grid-column: 1; grid-row: auto; }
-  .lp-q--2 { margin-left: 5%; }
-  .lp-q--4 { margin-left: 8%; }
-  .lp-q--5 { margin-left: 2%; }
+  .lp-q--2 { margin-left: 4%; width: calc(100% - 4%); }
+  .lp-q--4 { margin-left: 6%; width: calc(100% - 6%); }
+  .lp-q--5 { margin-left: 2%; width: calc(100% - 2%); }
+}
+
+@media (max-width: 600px) {
+  .lp-step--rate,
+  .lp-step--read { margin-left: 0; width: 100%; }
+  .lp-board-radar,
+  .lp-board-bars { margin-left: 0; width: 100%; }
+  .lp-q--2, .lp-q--4, .lp-q--5 { margin-left: 0; width: 100%; }
+  .lp-board-bars { padding: 18px 14px; }
+  .lp-panel { padding: 18px 14px; }
 }
 
 @media (max-width: 480px) {
   .lp-dim { gap: 14px; }
-  .lp-board-card, .lp-panel { box-shadow: 6px 6px 0 var(--l-ink); }
+  .lp-board-card, .lp-panel { box-shadow: 6px 6px 0 var(--l-ink); padding: 16px 12px; }
   .lp-id { box-shadow: 7px 7px 0 var(--l-ink); }
   .lp-note { max-width: 170px; font-size: .9rem; }
-  .lp-step--rate { margin-left: 3%; }
-  .lp-step--read { margin-left: 6%; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { dimensions } from '../questions';
 import type { Dimension } from '../questions';
 import { DIM_COLORS, getBand } from '../constants';
+import './BarChart.css';
 
 interface Props {
   scores: Record<Dimension, number>;
@@ -22,7 +23,7 @@ export default function BarChart({ scores }: Props) {
   const sorted = [...dimensions].sort((a, b) => (scores[b] ?? 0) - (scores[a] ?? 0));
 
   return (
-    <div ref={ref} style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+    <div ref={ref} className="bc-container">
       {sorted.map((dim) => {
         const score = Math.round(scores[dim] ?? 0);
         const band = getBand(score);
@@ -30,35 +31,25 @@ export default function BarChart({ scores }: Props) {
         const w = animated ? score : 0;
         const textColor = color === '#1C1A1A' ? '#FAF8F8' : (color === '#CCFF00' ? '#1C1A1A' : '#fff');
         return (
-          <div key={dim} style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-            <span style={{
-              fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '0.72rem',
-              letterSpacing: '0.07em', textTransform: 'uppercase',
-              width: 145, flexShrink: 0,
-            }}>{dim}</span>
-            <div style={{
-              flex: 1, background: '#E8E6E6', borderRadius: 4, height: 22,
-              border: '1.5px solid #1C1A1A', overflow: 'hidden', position: 'relative',
-            }}>
-              <div style={{
-                position: 'absolute', left: 0, top: 0, bottom: 0,
-                background: color,
-                width: `${w}%`,
-                borderRadius: 2,
-                transition: animated ? 'width 0.9s cubic-bezier(0.16,1,0.3,1)' : 'none',
-              }} />
+          <div key={dim} className="bc-row">
+            <span className="bc-label" title={dim}>{dim}</span>
+            <div className="bc-bar-track">
+              <div
+                className="bc-bar-fill"
+                style={{
+                  background: color,
+                  width: `${w}%`,
+                  transition: animated ? 'width 0.9s cubic-bezier(0.16,1,0.3,1)' : 'none',
+                }}
+              />
             </div>
-            <span style={{
-              fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '0.78rem',
-              width: 30, textAlign: 'right', flexShrink: 0,
-            }}>{score}</span>
-            <span style={{
-              fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '0.65rem',
-              letterSpacing: '0.1em', textTransform: 'uppercase',
-              background: color, color: textColor,
-              border: '1.5px solid #1C1A1A', borderRadius: 4,
-              padding: '3px 6px', width: 38, textAlign: 'center', flexShrink: 0,
-            }}>{band.short}</span>
+            <span className="bc-score">{score}</span>
+            <span
+              className="bc-badge"
+              style={{ background: color, color: textColor }}
+            >
+              {band.short}
+            </span>
           </div>
         );
       })}

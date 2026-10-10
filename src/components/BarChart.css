@@ -1,0 +1,112 @@
+.bc-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.bc-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.bc-label {
+  font-family: var(--font-display, 'Bricolage Grotesque', sans-serif);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  width: 145px;
+  flex-shrink: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bc-bar-track {
+  flex: 1;
+  min-width: 0;
+  background: #E8E6E6;
+  border-radius: 4px;
+  height: 22px;
+  border: 1.5px solid #1C1A1A;
+  overflow: hidden;
+  position: relative;
+}
+
+.bc-bar-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 2px;
+}
+
+.bc-score {
+  font-family: var(--font-display, 'Bricolage Grotesque', sans-serif);
+  font-weight: 700;
+  font-size: 0.78rem;
+  width: 30px;
+  text-align: right;
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.bc-badge {
+  font-family: var(--font-display, 'Bricolage Grotesque', sans-serif);
+  font-weight: 700;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1.5px solid #1C1A1A;
+  border-radius: 4px;
+  padding: 3px 6px;
+  width: 38px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+@media (max-width: 560px) {
+  .bc-container {
+    gap: 10px;
+  }
+  .bc-row {
+    gap: 6px;
+  }
+  .bc-label {
+    width: 100px;
+    font-size: 0.65rem;
+    letter-spacing: 0.03em;
+  }
+  .bc-bar-track {
+    height: 18px;
+  }
+  .bc-score {
+    width: 24px;
+    font-size: 0.72rem;
+  }
+  .bc-badge {
+    width: 32px;
+    font-size: 0.58rem;
+    padding: 2px 3px;
+    letter-spacing: 0.05em;
+  }
+}
+
+@media (max-width: 380px) {
+  .bc-label {
+    width: 90px;
+    font-size: 0.6rem;
+    letter-spacing: 0;
+  }
+  .bc-row {
+    gap: 5px;
+  }
+  .bc-badge {
+    width: 28px;
+    font-size: 0.54rem;
+    padding: 2px 2px;
+  }
+}
