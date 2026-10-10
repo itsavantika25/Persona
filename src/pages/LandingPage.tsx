@@ -160,7 +160,7 @@ export default function LandingPage() {
       <section className="lp-hero lp-grain" aria-label="Introduction">
         <div className="lp-wrap lp-hero-grid">
           <div className="lp-hero-copy">
-            <p className="lp-pill">{questions.length} questions, about ten minutes</p>
+            <p className="lp-pill">32 questions, about ten minutes</p>
             <h1 className="lp-h1">
               <span className="lp-h1-line">
                 YOU ARE <mark className="lp-mark">MORE</mark>
