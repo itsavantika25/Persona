@@ -61,8 +61,8 @@ type Tone = 'ink' | 'lime' | 'paper' | 'orange' | 'pink';
 // PLACEHOLDERS: swap these for real quotes from real people before launch.
 const TESTIMONIALS: { quote: string; author: string; tone: Tone }[] = [
 {
-    quote: "I thought it'd just tell me I'm an introvert or extrovert lol. The breakdown was actually way more interesting than I expected.",
-    author: 'Anonymous',
+    quote: "I was genuinely astonished by the results. I didn’t expect a test to capture my personality so accurately, with each category reflecting who I am. It was an unexpectedly insightful experience!",
+    author: 'Mugdha Agarwal',
     tone: 'ink',
   },
   {
@@ -98,7 +98,7 @@ const FAQS = [
   },
   {
     "q": "How long does the test take?",
-    "a": "The full assessment takes around 7–10 minutes on average, depending on how long you spend on ranking questions. There's no timer, so take as long as you need."
+    "a": "The full assessment takes around 10-15 minutes on average, depending on how long you spend on ranking questions. There's no timer, so take as long as you need."
   },
   {
     "q": "Should I answer as I am or as I'd like to be?",
